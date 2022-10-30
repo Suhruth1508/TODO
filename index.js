@@ -22,7 +22,7 @@ const todoList = () => {
     }
   
     const dueLater = () => {
-      // Write the date check condition here and return the array of todo items that are due later accordingly.
+      // Write the date check condition here and return the array of todo items that are due later accordingly
       return all.filter((data) => {
         return data.dueDate > tomorrow
       })
