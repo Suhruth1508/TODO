@@ -22,9 +22,9 @@ const todoList = () => {
     }
   
     const dueLater = () => {
-      // Write the date check condition here and return the array of todo items that are due later accordingly
+      // Write the date check condition here and return the array of todo items that are due later accordingly.
       return all.filter((data) => {
-        return data.dueDate > tomorrow
+        return data.dueDate >= tomorrow
       })
     }
   
@@ -34,18 +34,18 @@ const todoList = () => {
       list.forEach((data) => {
         if (data.dueDate === today){
             if (data.completed === true){
-                doList.push('[x] ${data.title}')
+                doList.push('[x] ' + data.title);
             }
             else{
-                doList.push('[ ] ${data.title}')
+                doList.push('[ ] ' + data.title)
             }
         }
         else{
             if (data.completed === true){
-                doList.push('[x] ${data.title} ${data.dueDate}')
+                doList.push('[x] ' + data.title + ' ' + data.dueDate)
             }
             else{
-                doList.push('[ ] ${data.title} ${data.dueDate}')
+                doList.push('[ ] ' + data.title + ' ' + data.dueDate)
             }
         }
       });
